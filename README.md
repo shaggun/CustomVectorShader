@@ -11,10 +11,10 @@ I noticed that when I added the UnitySprites.cginc file I broke the flip functio
 
 I'm using MaterialPropertyBlock to makes the changes, make sure you enable GPU instancing when you create your own materials, I didn't want to use an Update function to update the changes for a couple of properties, I wanted to take advantage of the property setter but as you know you cannot expose properties in Unity, only public fields, fortunately I stumbled upon an awesome asset called [Property Backing Field Drawer] it's free and it lets you expose properties as fields, you can find more info about it [here]. 
 
-**Requirements: 
-1. Add [Property Backing Field Drawer] asset once you download the project if you want to reuse my script with exposed properties, otherwise you will get errors, if you only want to use the shader then it's not necessary.**
+**Requirements:** 
+1. Add [Property Backing Field Drawer] asset once you download the project if you want to reuse my script with exposed properties, otherwise you will get errors, if you only want to use the shader then it's not necessary.
 
-**2. Download the latest Vector Graphics package with the Package Manager**
+2. Download the latest Vector Graphics package with the Package Manager**
 
 **Tested with Unity 2018.2.0f2**
 
