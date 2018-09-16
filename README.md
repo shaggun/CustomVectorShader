@@ -14,7 +14,7 @@ I'm using MaterialPropertyBlock to makes the changes, make sure you enable GPU i
 **Requirements:** 
 1. Add [Property Backing Field Drawer] asset once you download the project if you want to reuse my script with exposed properties, otherwise you will get errors, if you only want to use the shader then it's not necessary.
 
-2. Download the latest Vector Graphics package with the Package Manager**
+2. Download the latest Vector Graphics package from Windows->Package Manager
 
 **Tested with Unity 2018.2.0f2**
 
