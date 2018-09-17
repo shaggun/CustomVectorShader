@@ -32,41 +32,66 @@ public class VectorExtended : MonoBehaviour {
 
     }
 
-    public bool FlipVectorY
+    public bool FlipVectorX
     {
-        get { return _FlipVectorY; }
-        set { _FlipVectorY = value;
-            if (_FlipVectorY)
-            {
-                //180 degrees around X
-                transform.rotation = Quaternion.Euler(180, transform.rotation.y, transform.rotation.z);
-
+        get { return _FlipVectorX; }
+        set
+        {
+            _FlipVectorX = value;
+            if (_FlipVectorX)
+            {//180 degrees around Y axis
+                if (_FlipVectorY)
+                {
+                    transform.rotation = Quaternion.Euler(180f, 180f, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                }
             }
             else
-            {
-                //0 degrees around X
-                transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
-                
-                
+            {//0 degrees around Y axis
+                if (_FlipVectorY)
+                {
+                    transform.rotation = Quaternion.Euler(180f, 0f, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                }
             }
         }
     }
 
-    public bool FlipVectorX
+    public bool FlipVectorY
     {
-        get { return _FlipVectorX; }
-        set { _FlipVectorX = value;
-            if (_FlipVectorX)
-            {
-                //180 degrees around Y
-                transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        get { return _FlipVectorY; }
+        set
+        {
+            _FlipVectorY = value;
+            if (_FlipVectorY)
+            {//180 degrees around X axis
+                if (_FlipVectorX)
+                {
+                    transform.rotation = Quaternion.Euler(180f, 180f, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(180f, 0f, 0f);
+                }
             }
             else
             {
-                //0 degrees around Y
-                transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+                //0 degrees around X axis
+                if (_FlipVectorX)
+                {
+                    transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                }
             }
-
         }
     }
 
